@@ -20,5 +20,5 @@ Responsiblities of the component
 <li>component should allow the user to enter the number of stocks</li>
 <li>component should allow the user to enter the purchase price</li>
 <li>component should allow the user to save the stock entry</li>
-
+</ul>
 
