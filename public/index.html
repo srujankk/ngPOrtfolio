@@ -3,6 +3,7 @@
 <head>
     <title> ng-portfolio</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css"></link>
     <script type="text/javascript" src="libs/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="libs/angular.js"></script>
     <script type="text/javascript" src="javascripts/main.js"></script>
@@ -10,22 +11,23 @@
 
 <body ng-App="ngPortfolioApp">
 
-    <h1>ngPorfolio</h1> {{800/40}}
+    <h1>ngPorfolio</h1>
 
     <div ng-controller="MainController">
         <div>{{error}}</div>
-        <div style="width:50%;padding:20px;">
+        <div class="main-control">
             <ul class="list-group">
                 <li class="list-group-item" ng-repeat="stock in stocks">
                     <span class="badge">{{stock.count}}</span> {{stock.symbol}} - {{stock.purchasePrice | currency}}
                 </li>
             </ul>
-        </div>
-        <input type="text" ng-model="symbol" name="stockSymbol" placeholder="Stock symbol" />
-        <input type="text" ng-model="count" name="stockSymbol" placeholder="# of Stocks" />
-        <input type="text" ng-model="purchasePrice" name="stockSymbol" placeholder="Price" />
 
-        <input type="submit" value="Add" ng-click="addStock(symbol,count,purchasePrice)" />
+            <input type="text" ng-model="symbol" name="stockSymbol" placeholder="Stock symbol" />
+            <input type="text" ng-model="count" name="stockCount" placeholder="# of Stocks" />
+            <input type="text" ng-model="purchasePrice" name="purchasePrice" placeholder="Price" />
+
+            <input type="submit" value="Add" ng-click="addStock(symbol,count,purchasePrice)" />
+        </div>
     </div>
 </body>
 
