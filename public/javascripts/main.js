@@ -6,6 +6,10 @@ var MainController = function ($scope, $http) {
         $scope.error = err;
     }
 
+    var updateList = function (res) {
+        $scope.stocks.push(res.data);
+    }
+
     $http.get('/stocks')
         .then(onSuccess, onError);
 
@@ -18,7 +22,7 @@ var MainController = function ($scope, $http) {
                 count: c,
                 purchasePrice: p
             }
-        });
+        }).then(updateList, onError);
     }
 }
 
