@@ -2,6 +2,14 @@
 
 A Portfolio app which allows the user to enter his stocks in portfolio and see the list of stocks in his portfolio
 
+The serverside code just exposes REST API to add and get the entities
+
+/stocks GET
+would get the list of stocks added by the user / avaialble in the DB
+
+/stocks POST
+would add the current stock sent in the body of the post api call
+
 <h2>Add your stock</h2>
 
 Description:
