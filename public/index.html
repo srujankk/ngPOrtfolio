@@ -10,15 +10,14 @@
 </head>
 
 <body ng-App="ngPortfolioApp">
+    <div class="container">
+        <h1>ngPorfolio</h1>
 
-    <h1>ngPorfolio</h1>
-
-    <div ng-controller="MainController">
-        <div>{{error}}</div>
-        <div class="main-control">
+        <div ng-controller="MainController">
+            <div>{{error}}</div>
             <ul class="list-group">
                 <li class="list-group-item" ng-repeat="stock in stocks">
-                    <span class="badge">{{stock.count}}</span> {{stock.symbol}} - {{stock.purchasePrice | currency}}
+                    <span class="badge">{{stock.count}}</span> <a ng-click="stockDetail(stock.symbol)">{{stock.symbol}} - {{stock.purchasePrice | currency}}</a>
                 </li>
             </ul>
 

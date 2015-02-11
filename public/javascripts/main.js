@@ -10,6 +10,10 @@ var MainController = function ($scope, $http) {
         $scope.stocks.push(res.data);
     }
 
+    var onDetails = function(resp){
+        console.log(resp)
+    }
+
     $http.get('/stocks')
         .then(onSuccess, onError);
 
@@ -23,6 +27,18 @@ var MainController = function ($scope, $http) {
                 purchasePrice: p
             }
         }).then(updateList, onError);
+    }
+
+    $scope.stockDetail = function(s){
+        console.log(s);
+        $http({
+            "method": "get",
+            "url": "http://dev.markitondemand.com/Api/Quote/jsonp",
+            "dataType":"jsonp",
+            "data": {
+                "symbol": s
+            }
+        }).then(onDetails, onError);
     }
 }
 
