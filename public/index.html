@@ -16,7 +16,7 @@
         <div>{{error}}</div>
         <ul class="list-group">
             <li class="list-group-item" ng-repeat="stock in stocks">
-                <span class="badge">{{stock.count}}</span> {{stock.symbol}} - {{stock.purchasePrice | currency}}
+                <span class="badge">{{stock.count}}</span> <a ng-click="stockDetail(stock.symbol)">{{stock.symbol}} - {{stock.purchasePrice | currency}}</a>
             </li>
         </ul>
 
