@@ -8,6 +8,9 @@ var MainController = function ($scope, $http) {
 
     var updateList = function (res) {
         $scope.stocks.push(res.data);
+        $scope.symbol = "";
+        $scope.count = "";
+        $scope.purchasePrice = "";
     }
 
     $http.get('/stocks')
