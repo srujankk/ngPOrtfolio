@@ -13,7 +13,10 @@
 
     <h1>ngPorfolio</h1>
     <div ng-controller="MainController">
-        <div>{{error}}</div>
+        <div class="alert alert-danger" role="alert" ng-show="error">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{error}}
+        </div>
+
         <ul class="list-group">
             <li class="list-group-item" ng-repeat="stock in stocks">
                 <span class="badge">{{stock.count}}</span> <a ng-click="stockDetail(stock.symbol)">{{stock.symbol}} - {{stock.purchasePrice | currency}}</a>
