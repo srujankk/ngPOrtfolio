@@ -9,6 +9,7 @@
     <script type="text/javascript" src="javascripts/main.js"></script>
 </head>
 
+<<<<<<< HEAD
 <body ng-App="ngPortfolioApp" class="container">
 
     <h1>ngPorfolio</h1>
@@ -19,6 +20,19 @@
                 <span class="badge">{{stock.count}}</span> {{stock.symbol}} - {{stock.purchasePrice | currency}}
             </li>
         </ul>
+=======
+<body ng-App="ngPortfolioApp">
+    <div class="container">
+        <h1>ngPorfolio</h1>
+
+        <div ng-controller="MainController">
+            <div>{{error}}</div>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="stock in stocks">
+                    <span class="badge">{{stock.count}}</span> <a ng-click="stockDetail(stock.symbol)">{{stock.symbol}} - {{stock.purchasePrice | currency}}</a>
+                </li>
+            </ul>
+>>>>>>> ngPortfolio/master
 
         <input type="text" ng-model="symbol" name="stockSymbol" placeholder="Stock symbol" />
         <input type="text" ng-model="count" name="stockCount" placeholder="# of Stocks" />
