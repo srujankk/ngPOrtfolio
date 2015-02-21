@@ -1,6 +1,6 @@
 /**
  * Require the modules
- * express :  framework
+ * express: framework
  * mongoose: module to connect MongoDB
  * body-parser: middleware
  */
