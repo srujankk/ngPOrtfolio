@@ -6,29 +6,13 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css"></link>
     <script type="text/javascript" src="libs/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="libs/angular.js"></script>
+    <script type="text/javascript" src="libs/angular-route.js"></script>
     <script type="text/javascript" src="javascripts/main.js"></script>
 </head>
 
 <body ng-App="ngPortfolioApp" class="container">
-
     <h1>ngPorfolio</h1>
-    <div ng-controller="MainController">
-        <div class="alert alert-danger" role="alert" ng-show="error">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{error}}
-        </div>
-
-        <ul class="list-group">
-            <li class="list-group-item" ng-repeat="stock in stocks">
-                <span class="badge">{{stock.count}}</span> <a ng-click="stockDetail(stock.symbol)">{{stock.symbol}} - {{stock.purchasePrice | currency}}</a>
-            </li>
-        </ul>
-
-        <input type="text" ng-model="symbol" name="stockSymbol" placeholder="Stock symbol" />
-        <input type="text" ng-model="count" name="stockCount" placeholder="# of Stocks" />
-        <input type="text" ng-model="purchasePrice" name="purchasePrice" placeholder="Price" />
-
-        <input type="submit" value="Add" ng-click="addStock(symbol,count,purchasePrice)" />
-    </div>
+    <ng-view></ng-view>
 </body>
 
 </html>

@@ -92,8 +92,16 @@ var MainController = function ($scope, $http) {
 /**
  * Creating an angular Application object
  */
-var ngPortfolioApp = angular.module("ngPortfolioApp", []);
+var ngPortfolioApp = angular.module("ngPortfolioApp", ['ngRoute']);
 
+ngPortfolioApp.config(function ($routeProvider) {
+    $routeProvider.when('/', {
+        templateUrl: 'templates/dashboard.html'
+    });
+    $routeProvider.when('/stocks/:stocksymbol', {
+        templateUrl: 'templates/stockDetails.html'
+    })
+});
 /**
  * Adding Controller to the Application / Module
  * Added $scope and $http are injected into the MainController
