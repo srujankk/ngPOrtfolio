@@ -92,18 +92,30 @@ var MainController = function ($scope, $http) {
 /**
  * Creating an angular Application object
  */
-var ngPortfolioApp = angular.module("ngPortfolioApp", ['ngRoute']);
+var ngPortfolioApp = angular.module("ngPortfolioApp", ['ngRoute', 'markitDataServices']);
 
+/**
+ * configure the routes for the application
+ * using when to configure the route specific for a hash url
+ * TODO: use otherwise to configure a default or unknown url route
+ * NOTE: ng-route is a seperate javascript file. angular-route.js
+ */
 ngPortfolioApp.config(function ($routeProvider) {
+    /**
+     * route to dashboard if no hash is present in the url
+     */
     $routeProvider.when('/', {
         templateUrl: 'templates/dashboard.html'
     });
+    /**
+     * route to stock details of the stocksymbol in the hash
+     */
     $routeProvider.when('/stocks/:stocksymbol', {
         templateUrl: 'templates/stockDetails.html'
     })
 });
 /**
- * Adding Controller to the Application / Module
+ * Adding MainController to the Application / Module
  * Added $scope and $http are injected into the MainController
  * This helps in minification of MainController and
  * The arguments for MainController will be resolved by the injected paramenters in the same order

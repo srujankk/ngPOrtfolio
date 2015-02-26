@@ -1,1 +1,3 @@
-<h1> Stock Details</h1>
+<div ng-controller="StockDetailsController">
+    <h2>{{companyName}} ({{stocksymbol}})</h2> {{openPrice | currency}} - {{lastPrice | currency}}
+</div>
