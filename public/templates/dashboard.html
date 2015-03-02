@@ -6,7 +6,6 @@
     <ul class="list-group">
         <li class="list-group-item" ng-repeat="stock in stocks">
             <span class="badge">{{stock.count}}</span>
-            <!--<a ng-click="stockDetail(stock.symbol)">{{stock.symbol}} - {{stock.purchasePrice | currency}}</a>-->
             <a href="#/stocks/{{stock.symbol}}">{{stock.symbol}} - {{stock.purchasePrice | currency}}</a>
         </li>
     </ul>
