@@ -30,7 +30,7 @@ Responsiblities of the component
 <li>component should allow the user to save the stock entry</li>
 </ul>
 
-<h2>View Details of the stock</h2>
+<h2>View details of selected stock</h2>
 Description:
 This component should allow the user to view the details of the stock.
 <ul>
@@ -40,6 +40,6 @@ This component should allow the user to view the details of the stock.
     <li>Closing Price</li>
 </ul>
 
-This view would use <a href="http://dev.markitondemand.com/">markit data api</a> to get the stock details
+This view would use <a href="http://dev.markitondemand.com/">Markit On Demand</a> to get the stock details
 
 
