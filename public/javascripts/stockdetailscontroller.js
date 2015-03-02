@@ -20,14 +20,4 @@ var StockDetailsController = function ($scope, $routeParams, Quote) {
         function (err) {
             console.log(err);
         });
-}
-
-/**
- * Adding StockDetailsController to the Application / Module
- * Added $scope and $http are injected into the StockDetailsController
- * This helps in minification of StockDetailsController and
- * The arguments for StockDetailsController will be resolved by the injected paramenters in the same order
- * Here $scope would be s in the StockDetailsController since it is the first argument
- * $http would be h in StockDetailsController
- */
-ngPortfolioApp.controller("StockDetailsController", ['$scope', '$routeParams', 'Quote', StockDetailsController]);
+};
