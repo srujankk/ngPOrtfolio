@@ -1,8 +1,8 @@
 /**
- * Defining the MainController of the application
- * The MainController would retrieve the list of stocks
+ * Defining the DashboardContorller of the application
+ * The DashboardContorller would retrieve the list of stocks
  */
-var MainController = function ($scope, $http) {
+var DashboardController = function ($scope, $http) {
     'use strict';
     /**
      * displayAllStocks is the success callback for the "/stocks" GET call
@@ -66,26 +66,5 @@ var MainController = function ($scope, $http) {
                 purchasePrice: p
             }
         }).then(addStocktoList, onError);
-    };
-
-    /**
-     * GET call to get the details of the stock the user selected
-     * URL: "http://dev.markitondemand.com/Api/Quote/jsonp"
-     * DATA: Stock Symbol
-     * SUCCESS: onDetails
-     * ERROR: onError
-     * TODO: This should be converted to a click Handler to display the details view
-     * The details view should be responsible for making the call to get the details
-     */
-    $scope.stockDetail = function (s) {
-        console.log(s);
-        $http({
-            "method": "get",
-            "url": "http://dev.markitondemand.com/Api/Quote/jsonp",
-            "dataType": "jsonp",
-            "data": {
-                "symbol": s
-            }
-        }).then(onDetails, onError);
     };
 };

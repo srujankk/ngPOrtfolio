@@ -26,14 +26,14 @@ ngPortfolioApp.config(function ($routeProvider) {
     });
 });
 /**
- * Adding MainController to the Application / Module
- * Added $scope and $http are injected into the MainController
- * This helps in minification of MainController and
- * The arguments for MainController will be resolved by the injected paramenters in the same order
- * Here $scope would be s in the MainController since it is the first argument
- * $http would be h in MainController
+ * Adding DashboardController to the Application / Module
+ * Added $scope and $http are injected into the DashboardController
+ * This helps in minification of DashboardController and
+ * The arguments for DashboardController will be resolved by the injected paramenters in the same order
+ * Here $scope would be s in the DashboardController since it is the first argument
+ * $http would be h in DashboardController
  */
-ngPortfolioApp.controller("MainController", ['$scope', '$http', MainController]);
+ngPortfolioApp.controller("DashboardController", ['$scope', '$http', DashboardController]);
 
 /**
  * Adding StockDetailsController to the Application / Module
