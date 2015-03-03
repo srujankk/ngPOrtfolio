@@ -6,7 +6,8 @@ var express = require('express'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
     stock = require('../models/stock'),
-    stockModel = mongoose.model('Stock');
+    stockModel = mongoose.model('Stock'),
+    router = express.Router();
 
 /**
  * Using the body-parser middleware
@@ -21,7 +22,7 @@ mongoose.connect('mongodb://localhost:27017/portfolio');
 /**
  * show would be called when the user is routed with the GET call for '/stocks'
  */
-exports.show = function (req, res) {
+router.get('/', function (req, res) {
     /**
      * Get the Database connection
      */
@@ -40,12 +41,12 @@ exports.show = function (req, res) {
          */
         res.send(stocks);
     });
-}
+});
 
 /**
  * add would be called when the user is routed with the POST call for '/stocks'
  */
-exports.add = function (req, res) {
+router.post('/', function (req, res) {
     /**
      * Create a new stockModel with the request body
      */
@@ -59,4 +60,6 @@ exports.add = function (req, res) {
          */
         res.send(stock);
     });
-}
+});
+
+module.exports = router;
