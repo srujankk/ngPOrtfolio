@@ -17,7 +17,9 @@ express().use(bodyParser.json());
 /**
  * Connect to the local mongoDB database named portfolio
  */
-mongoose.connect('mongodb://localhost:27017/portfolio');
+//mongoose.connect('mongodb://localhost:27017/portfolio');
+mongoose.connect('mongodb://srujankk:srujankk@ds039441.mongolab.com:39441/portfolio');
+
 
 /**
  * show would be called when the user is routed with the GET call for '/stocks'
