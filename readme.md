@@ -42,9 +42,10 @@ This component should allow the user to view the details of the stock.
 
 This view would use <a href="http://dev.markitondemand.com/">Markit On Demand</a> to get the stock details
 
-<h2>Demo</h2>
-<a href="http://justanotherportfolio.heroku.com>ngPortfolio - Just Another Portfolio</a>
-Automatic deployment configured for github master branch on heroku.
+<h2>Deployment</h2>
+Automatic deployment configured for github master branch on heroku. 
+<a href="http://justanotherportfolio.heroku.com target="_blank">ngPortfolio - Just Another Portfolio</a>
+
 
 
 
