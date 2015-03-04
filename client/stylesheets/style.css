@@ -10,3 +10,99 @@ a {
 .main-control {
     padding: 50px;
 }
+
+body {
+    /*padding: 50px;*/
+    /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+}
+
+.pfolio-logo-bg {
+    width: 50px;
+    height: 50px;
+    background: #e37368;
+    border: 2px solid #e37368;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.pfolio-logo-bg span {
+    margin-top: 20px;
+    font-size: 2em;
+    color: #FFF;
+}
+
+.pfolio-logo-bg h1 {
+    display: inline;
+    float: left;
+}
+
+a {
+    color: #00B7FF;
+}
+
+header {
+    padding: 20px;
+    /*text-align: center;*/
+}
+
+nav ul {
+    line-height: 50px;
+    padding: 0px;
+}
+
+nav ul li {
+    display: inline;
+    padding-right: 20px;
+}
+
+.profit {
+    color: #FFF;
+}
+
+.portfolio-total {
+    background-color: #91d174;
+    color: #FFF;
+    margin-top: 50px;
+}
+
+.amount-lg {
+    font-size: 5em;
+    font-stretch: ultra-condensed;
+    text-shadow: 2px 2px #83b65e;
+}
+
+.pfolio-breakup {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.pfolio-breakup-bg {
+    width: 100px;
+    height: 100px;
+    background: #e97661;
+    /*border: 2px solid #e97661;*/
+
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+.pfolio-breakup-icon {
+    font-size: 3em;
+    color: #fff;
+    margin-top: 30px;
+    text-shadow: 2px 2px #dc5d51;
+}
+
+.stock {
+    margin-left: 10px;
+}
+
+.chart {
+    width: 250px;
+    height: 250px;
+    background-color: #CCC;
+}

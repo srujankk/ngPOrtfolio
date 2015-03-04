@@ -7,8 +7,31 @@
 </head>
 
 <body ng-App="ngPortfolioApp" class="container">
-    <h1>ngPorfolio</h1>
-    <em>just another portfolio !!</em>
+    <!--<h1>ngPorfolio</h1>
+    <em>just another portfolio !!</em>-->
+
+    <header>
+        <div style="float:left">
+            <div class="pfolio-logo-bg">
+                <span class="glyphicon glyphicon-briefcase " aria-hidden="true"></span>
+            </div>
+        </div>
+        <nav style="float:right">
+            <ul>
+                <li>portfolio</li>
+                <li>admin</li>
+                <li>watchlist</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="portfolio-total pfolio-breakup">
+        <h4>Current Portfolio Value </h4>
+        <h2 class="amount-lg">$ --</h2>
+        <h4>( <span class="glyphicon glyphicon-thumbs-up profit" aria-hidden="true"></span> $ --)</h4>
+        <h5>change since yesterday</h5>
+    </section>
+
     <ng-view></ng-view>
 
     <script type="text/javascript" src="libs/angular.js"></script>
