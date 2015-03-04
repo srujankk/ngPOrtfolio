@@ -53,7 +53,7 @@ app.use('/', function (req, res, next) {
  * static files: HTML, CSS, Images
  * resources used by the client side application
  */
-app.use(express.static(path.join(__dirname, '../client')));
+app.use(express.static(path.join(__dirname, 'client')));
 
 /**
  * middleware for routes
