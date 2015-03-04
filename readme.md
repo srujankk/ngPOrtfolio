@@ -44,7 +44,7 @@ This view would use <a href="http://dev.markitondemand.com/">Markit On Demand</a
 
 <h2>Deployment</h2>
 Automatic deployment configured for github master branch on heroku. 
-<a href="http://justanotherportfolio.heroku.com target="_blank">ngPortfolio - Just Another Portfolio</a>
+<a href="http://justanotherportfolio.heroku.com" target="_blank">ngPortfolio - Just Another Portfolio</a>
 
 
 
