@@ -12,12 +12,12 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     stocks = require('./controllers/stocks'),
-    config = require('./config.js');
+    config = require('./config.js'),
 
-/**
- * Application object
- */
-app = express();
+    /**
+     * Application object
+     */
+    app = express();
 
 /**
  * Db connection for mongoose
