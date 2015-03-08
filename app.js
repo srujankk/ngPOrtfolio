@@ -12,11 +12,12 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     stocks = require('./controllers/stocks'),
+    config = require('./config.js');
 
-    /**
-     * Application object
-     */
-    app = express();
+/**
+ * Application object
+ */
+app = express();
 
 /**
  * Db connection for mongoose
@@ -54,16 +55,6 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(cookieParser());
-
-/**
- * Applying the header values for the response
- * TODO: Can be removed if not required
- */
-app.use('/', function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    next();
-});
 
 /**
  * middleware for routes

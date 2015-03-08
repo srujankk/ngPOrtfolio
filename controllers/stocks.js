@@ -4,15 +4,8 @@
  */
 var express = require('express'),
     mongoose = require('mongoose'),
-    bodyParser = require('body-parser'),
     stockModel = require('../models/stockModel'),
-    config = require('../config'),
     router = express.Router();
-
-/**
- * Using the body-parser middleware
- */
-express().use(bodyParser.json());
 
 /**
  * show would be called when the user is routed with the GET call for '/stocks'
