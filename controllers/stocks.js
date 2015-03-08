@@ -18,12 +18,12 @@ router.get('/', function (req, res) {
         /**
          * Get the collection from the db connection
          */
-        portfolio = db.collection('stocks');
+        stocksCollection = db.collection('stocks');
 
     /**
      * Get all the records from the collection
      */
-    portfolio.find().toArray(function (err, stocks) {
+    stocksCollection.find().toArray(function (err, stocks) {
         /**
          * send the json object as the response
          */
