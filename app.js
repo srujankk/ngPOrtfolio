@@ -17,6 +17,10 @@ var express = require('express'),
      * Application object
      */
     app = express();
+
+/**
+ * Db connection for mongoose
+ */
 mongoose.connect(config.dbConn);
 
 /**
@@ -34,6 +38,10 @@ app.set('view engine', 'jade');
  * set the location or path for the static files
  * static files: HTML, CSS, Images
  * resources used by the client side application
+ * Static middleware is updated the beginning so that,
+ * it just returns if it is a static resource request
+ * need not take on the other middlewares
+ * express.static returns if it is a static middleware
  */
 app.use(express.static(path.join(__dirname, 'client')));
 
@@ -60,8 +68,6 @@ app.use('/', function (req, res, next) {
 /**
  * middleware for routes
  */
-//app.use('/', routes);
-//app.use('/users', users);
 app.use('/stocks', stocks);
 
 /**
