@@ -6,6 +6,7 @@ var express = require('express'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
     stock = require('../models/stock'),
+    config = require('../config'),
     stockModel = mongoose.model('Stock'),
     router = express.Router();
 
@@ -16,8 +17,7 @@ express().use(bodyParser.json());
 /**
  * Connect to the local mongoDB database named portfolio
  */
-//mongoose.connect('mongodb://localhost:27017/portfolio');
-mongoose.connect('mongodb://srujankk:srujankk@ds039441.mongolab.com:39441/portfolio');
+mongoose.connect(config.dbConn);
 
 
 /**
