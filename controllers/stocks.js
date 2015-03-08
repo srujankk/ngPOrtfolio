@@ -13,7 +13,6 @@ var express = require('express'),
  * Using the body-parser middleware
  */
 express().use(bodyParser.json());
-
 /**
  * Connect to the local mongoDB database named portfolio
  */

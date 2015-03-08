@@ -1,4 +1,4 @@
-body {
+.body-style {
     padding: 20px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
@@ -64,7 +64,7 @@ nav ul li {
 .portfolio-total {
     background-color: #91d174;
     color: #FFF;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
 }
 
 .amount-lg {
@@ -105,4 +105,32 @@ nav ul li {
     width: 250px;
     height: 250px;
     background-color: #CCC;
+}
+/* Styles Used in Proto.html */
+
+.topbar {}
+
+.topbar>div {
+    padding: 15px;
+}
+
+.logo-container {
+    background-color: #3699B6;
+    color: #FFF;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.main-menu {
+    background-color: #505B63;
+}
+
+.search-text {
+    padding: 0px;
+    border: none;
+    font-size: 20px;
+}
+
+.user-avatar {
+    padding: 5px;
 }

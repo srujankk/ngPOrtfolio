@@ -28,6 +28,14 @@ app.set('view engine', 'jade');
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 
 /**
+ * Using the static middleware
+ * set the location or path for the static files
+ * static files: HTML, CSS, Images
+ * resources used by the client side application
+ */
+app.use(express.static(path.join(__dirname, 'client')));
+
+/**
  * Using the required middleware
  */
 app.use(logger('dev'));
@@ -46,14 +54,6 @@ app.use('/', function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     next();
 });
-
-/**
- * Using the static middleware
- * set the location or path for the static files
- * static files: HTML, CSS, Images
- * resources used by the client side application
- */
-app.use(express.static(path.join(__dirname, 'client')));
 
 /**
  * middleware for routes
