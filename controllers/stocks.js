@@ -5,20 +5,14 @@
 var express = require('express'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
-    stock = require('../models/stock'),
+    stockModel = require('../models/stockModel'),
     config = require('../config'),
-    stockModel = mongoose.model('Stock'),
     router = express.Router();
 
 /**
  * Using the body-parser middleware
  */
 express().use(bodyParser.json());
-/**
- * Connect to the local mongoDB database named portfolio
- */
-mongoose.connect(config.dbConn);
-
 
 /**
  * show would be called when the user is routed with the GET call for '/stocks'

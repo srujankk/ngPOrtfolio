@@ -14,4 +14,7 @@ var mongoose = require('mongoose'),
         purchasePrice: Number
     });
 
-mongoose.model('Stock', StockSchema);
+/**
+ * StockSchema is publicly avaialble
+ */
+module.exports = StockSchema;
