@@ -10,7 +10,6 @@ var express = require('express'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
-    mongoose = require('mongoose'),
     stocks = require('./controllers/stocks'),
     config = require('./config.js'),
 
@@ -18,11 +17,6 @@ var express = require('express'),
      * Application object
      */
     app = express();
-
-/**
- * Db connection for mongoose
- */
-mongoose.connect(config.dbConn);
 
 /**
  * Setting up path or location for views / templates

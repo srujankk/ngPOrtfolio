@@ -3,7 +3,7 @@
  * requires the stock model
  */
 var express = require('express'),
-    mongoose = require('mongoose'),
+    mongoose = require('../models/mongo'),
     stockModel = require('../models/stockModel'),
     router = express.Router();
 
