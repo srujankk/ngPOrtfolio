@@ -15,6 +15,6 @@ var mongoose = require('mongoose'),
     });
 
 /**
- * StockSchema is publicly avaialble
+ * StockSchema is publicly available
  */
 module.exports = StockSchema;

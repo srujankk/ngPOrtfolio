@@ -11,7 +11,6 @@ var express = require('express'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
     stocks = require('./controllers/stocks'),
-    config = require('./config.js'),
 
     /**
      * Application object
