@@ -1,8 +1,3 @@
-.body-style {
-    padding: 20px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
 a {
     color: #00B7FF;
 }
@@ -19,23 +14,20 @@ body {
 .pfolio-logo-bg {
     width: 50px;
     height: 50px;
-    background: #e37368;
-    border: 2px solid #e37368;
+    background: #FFF;
+    border: 2px solid #FFF;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     border-radius: 50px;
     text-align: center;
+    float: left;
+    margin-top: 10px;
 }
 
 .pfolio-logo-bg span {
     margin-top: 20px;
     font-size: 2em;
-    color: #FFF;
-}
-
-.pfolio-logo-bg h1 {
-    display: inline;
-    float: left;
+    color: #F0CF49;
 }
 
 a {
@@ -43,8 +35,8 @@ a {
 }
 
 header {
-    padding: 20px;
-    /*text-align: center;*/
+    /*padding: 20px;
+    text-align: center;*/
 }
 
 nav ul {
@@ -106,31 +98,41 @@ nav ul li {
     height: 250px;
     background-color: #CCC;
 }
-/* Styles Used in Proto.html */
 
-.topbar {}
+.dashboard-container {
+    margin-top: 20px;
+}
+/* From Proto.css */
 
-.topbar>div {
-    padding: 15px;
+@font-face {
+    font-family: moonflower;
+    src: url(/fonts/Moonflower.ttf);
 }
 
-.logo-container {
-    background-color: #3699B6;
+@font-face {
+    font-family: mindblue;
+    src: url(/fonts/MindBlue.otf);
+}
+
+body {}
+
+.top-banner {}
+
+.logo-ph {
+    background-color: #F0CF49;
+    font-family: mindblue;
+    padding: 20px;
+}
+
+.logo-ph h1 {
+    margin-left: 65px;
+    /*margin-top: 10px;
+    display: inline;*/
+}
+
+.value-banner {
+    background-color: #2B2F34;
+    font-family: mindblue;
+    padding: 20px;
     color: #FFF;
-    font-size: 20px;
-    padding-left: 10px;
-}
-
-.main-menu {
-    background-color: #505B63;
-}
-
-.search-text {
-    padding: 0px;
-    border: none;
-    font-size: 20px;
-}
-
-.user-avatar {
-    padding: 5px;
 }

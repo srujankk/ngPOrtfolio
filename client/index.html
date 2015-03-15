@@ -6,31 +6,39 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css"></link>
 </head>
 
-<body ng-App="ngPortfolioApp" class="body-style container">
+<body ng-App="ngPortfolioApp" class="container-fluid">
     <!--<h1>ngPorfolio</h1>
     <em>just another portfolio !!</em>-->
 
     <header>
-        <div style="float:left">
-            <div class="pfolio-logo-bg">
-                <span class="glyphicon glyphicon-briefcase " aria-hidden="true"></span>
+        <div class="row top-banner">
+            <div class="col-md-3 logo-ph">
+                <div class="pfolio-logo-bg">
+                    <span class="glyphicon glyphicon-briefcase " aria-hidden="true"></span>
+                </div>
+                <h1>ng-Portfolio</h1>
             </div>
-        </div>
-        <nav style="float:right">
-            <ul>
-                <li>portfolio</li>
-                <li>admin</li>
-                <li>watchlist</li>
-            </ul>
-        </nav>
-    </header>
+            <div class="col-md-9 value-banner">
+                <h1>Portfolio Value: $--</h1>
+                <!--<h1>Change since yesterday: $--</h1>-->
+            </div>
 
+        </div>
+
+    </header>
+    <!--<nav style="float:right">
+        <ul>
+            <li>portfolio</li>
+            <li>admin</li>
+            <li>watchlist</li>
+        </ul>
+    </nav>
     <section class="portfolio-total pfolio-breakup">
         <h4>Current Portfolio Value </h4>
         <h2 class="amount-lg">$ --</h2>
         <h4>( <span class="glyphicon glyphicon-thumbs-up profit" aria-hidden="true"></span> $ --)</h4>
         <h5>change since yesterday</h5>
-    </section>
+    </section>-->
 
     <ng-view></ng-view>
 

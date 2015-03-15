@@ -1,18 +1,18 @@
-<div ng-controller="DashboardController">
+<div ng-controller="DashboardController" class="dashboard-container">
+
     <div class="alert alert-danger" role="alert" ng-show="error">
         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{error}}
     </div>
-
+    <form class="form-inline">
+        <input type="text" ng-model="symbol" name="stockSymbol" placeholder="Stock symbol" class="form-control" />
+        <input type="text" ng-model="count" name="stockCount" placeholder="# of Stocks" class="form-control" />
+        <input type="text" ng-model="purchasePrice" name="purchasePrice" placeholder="Price" class="form-control" />
+        <input type="submit" value="Add" class="btn btn-default" ng-click="addStock(symbol,count,purchasePrice)" />
+    </form>
     <ul class="list-group">
         <li class="list-group-item" ng-repeat="stock in stocks">
             <span class="badge">{{stock.count}}</span>
             <a href="#/stocks/{{stock.symbol}}">{{stock.symbol}} - {{stock.purchasePrice | currency}}</a>
         </li>
     </ul>
-
-    <input type="text" ng-model="symbol" name="stockSymbol" placeholder="Stock symbol" />
-    <input type="text" ng-model="count" name="stockCount" placeholder="# of Stocks" />
-    <input type="text" ng-model="purchasePrice" name="purchasePrice" placeholder="Price" />
-
-    <input type="submit" value="Add" ng-click="addStock(symbol,count,purchasePrice)" />
 </div>
